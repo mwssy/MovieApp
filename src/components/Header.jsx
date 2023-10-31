@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 function Header() {
     return (
-        <div>
+        <Container>
             <Link to="/">홈</Link>
             <Link to="/movie">서브</Link>
-        </div>
+        </Container>
     );
 }
 
