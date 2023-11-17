@@ -8,6 +8,7 @@ import { config } from "../data/constant"
 function Home() {
     const [movies, setMovies] = useState([])
 
+    // 로직 작성
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/popular?language=ko-KR&api_key=${config.API_KEY}`)
         .then((res) => res.json())
