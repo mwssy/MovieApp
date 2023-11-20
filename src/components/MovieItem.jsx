@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function MovieItem({movie}){
+    const navigate = useNavigate()
+
+    const onClickPoster = () => {
+        navigate("/movie/" + movie.id)
+    }
+
     return (
-        <Container>
+        <Container onClick={onClickPoster}>
             <ImgBox>
                 <img src={`http://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="영화 포스터 사진" />
             </ImgBox>
@@ -19,6 +26,7 @@ export default MovieItem;
 
 const Container = styled.div`
     position: relative;
+    cursor: pointer;
 `
 
 const ImgBox = styled.div`

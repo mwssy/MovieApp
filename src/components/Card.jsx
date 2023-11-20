@@ -30,7 +30,7 @@ function Card({movie}) {
                             <Ovelay>
                                 <Title>{movie.origin_title}</Title>
                                 <SubTitle>{movie.release_date} / ❤️{movie.vote_average}</SubTitle>
-                                <Description>{movie.overview}</Description>
+                                <Description>{movie.overview.slice(0,50) +"..."}</Description>
                             </Ovelay>
                         </Item>
                     </Link>
